@@ -1,33 +1,17 @@
 import java.util.*;
 public class TicTacToe {
-    public static int Tic(String board[][],String input,int s) {
+    public static int Tic(String board[][],String input,String xORo,int s) {
         int c=0;
         for(int i=0;i<board.length;i++) {
             for(int j=0;j<board[0].length;j++) {
                 if(board[i][j].equals(input)){
-                    board[i][j]="|x| ";
+                    board[i][j]="|"+xORo+"| ";
                     c++;
                 }
             }
         }
         if(c!=1){
-            System.out.println("NICE TRY, BUT THAT SPOT HAS ALREADY BEEN CLAIMED");
-            return --s;
-        }
-        return s;
-    }
-    public static int Tac(String board[][],String input,int s) {
-        int c=0;
-        for(int i=0;i<board.length;i++) {
-            for(int j=0;j<board[0].length;j++) {
-                if(board[i][j].equals(input)) {
-                    board[i][j]="|o| ";
-                    c++;
-                }
-            }
-        }
-        if(c!=1){
-            System.out.println("NICE TRY, BUT THAT SPOT HAS ALREADY BEEN CLAIMED");
+            System.out.println("NICE TRY, INVALID MOVE OR SPOT TAKEN");
             return --s;
         }
         return s;
@@ -62,13 +46,13 @@ public class TicTacToe {
             if(i%2!=0){
                 System.out.println("PLAYER 1 PLEASE GIVE YOUR MOVE");
                 String input=sc.nextLine();
-                i=Tic(TicTacToe,input,i);
+                i=Tic(TicTacToe,input,"x",i);
                 xORo="x";
                 }
             else {
                 System.out.println("PLAYER 2 PLEASE GIVE YOUR MOVE");
                 String input=sc.nextLine();
-                i=Tac(TicTacToe,input,i);
+                i=Tic(TicTacToe,input,"o",i);
                 xORo="o";
             }
             for(int j=0;j<TicTacToe.length;j++) {
