@@ -1,5 +1,5 @@
 import java.util.*;
-public class Array2D5 {
+public class TicTacToe {
     public static int Tic(String board[][],String input,int s) {
         int c=0;
         for(int i=0;i<board.length;i++) {
