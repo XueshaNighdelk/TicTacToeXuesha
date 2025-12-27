@@ -63,9 +63,9 @@ a1 b1 c1
 PLAYER 1 (x) PLEASE GIVE YOUR MOVE
 > b2
 
-|_| |_| |_| 
-|_| |x| |_| 
-|_| |_| |_| 
+a3 b3 c3 
+a2 |x| c2 
+a1 b1 c1
 
 Project Structure
 TicTacToe-Java/
