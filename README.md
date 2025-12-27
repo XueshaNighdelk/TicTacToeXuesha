@@ -1,5 +1,5 @@
 # TicTacToeXuesha
-🎮 Console Tic-Tac-Toe
+Console Tic-Tac-Toe
 A classic Tic-Tac-Toe game built in Java that runs directly in the command line interface (CLI). Two players can play against each other using a coordinate-based input system.
 
 Features :
@@ -32,17 +32,17 @@ Run the game:
 
 Bash
 java TicTacToe
-🕹️ How to Play
+
+How to Play
 The board is arranged in a 3x3 grid using columns (a, b, c) and rows (1, 2, 3).
 
 The Grid Layout:
-
 Plaintext
  a3 | b3 | c3 
  a2 | b2 | c2 
  a1 | b1 | c1 
-Player 1 is X.
 
+Player 1 is X.
 Player 2 is O.
 
 When prompted, type the coordinate of the box you want to claim (e.g., a1 or b3) and press Enter.
@@ -66,7 +66,8 @@ PLAYER 1 (x) PLEASE GIVE YOUR MOVE
 |_| |_| |_| 
 |_| |x| |_| 
 |_| |_| |_| 
-🛠️ Project Structure
+
+Project Structure
 TicTacToe-Java/
 │
 ├── TicTacToe.java    # Main game source code
