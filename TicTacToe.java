@@ -4,7 +4,7 @@ public class TicTacToe {
         int c=0;
         for(int i=0;i<board.length;i++) {
             for(int j=0;j<board[0].length;j++) {
-                // Check if the cell equals the user input
+                // Check if the cell contains the user input
                 if(board[i][j].equals(input)){
                     board[i][j]="|"+xORo+"| ";
                     c++;
@@ -19,23 +19,23 @@ public class TicTacToe {
     }
     public static boolean CheckThreeMatchX(String board[][],String xORo) {
         // Horizontal Checks
-        if (board[0][0].equals(xORo) && board[0][1].equals(xORo) && board[0][2].equals(xORo)) return true;
-        if (board[1][0].equals(xORo) && board[1][1].equals(xORo) && board[1][2].equals(xORo)) return true;
-        if (board[2][0].equals(xORo) && board[2][1].equals(xORo) && board[2][2].equals(xORo)) return true;
+        if (board[0][0].contains(xORo) && board[0][1].contains(xORo) && board[0][2].contains(xORo)) return true;
+        if (board[1][0].contains(xORo) && board[1][1].contains(xORo) && board[1][2].contains(xORo)) return true;
+        if (board[2][0].contains(xORo) && board[2][1].contains(xORo) && board[2][2].contains(xORo)) return true;
         // Vertical Checks
-        if (board[0][0].equals(xORo) && board[1][0].equals(xORo) && board[2][0].equals(xORo)) return true;
-        if (board[0][1].equals(xORo) && board[1][1].equals(xORo) && board[2][1].equals(xORo)) return true;
-        if (board[0][2].equals(xORo) && board[1][2].equals(xORo) && board[2][2].equals(xORo)) return true;
+        if (board[0][0].contains(xORo) && board[1][0].contains(xORo) && board[2][0].contains(xORo)) return true;
+        if (board[0][1].contains(xORo) && board[1][1].contains(xORo) && board[2][1].contains(xORo)) return true;
+        if (board[0][2].contains(xORo) && board[1][2].contains(xORo) && board[2][2].contains(xORo)) return true;
         // Diagonal Checks
-        if (board[0][0].equals(xORo) && board[1][1].equals(xORo) && board[2][2].equals(xORo)) return true;
-        if (board[0][2].equals(xORo) && board[1][1].equals(xORo) && board[2][0].equals(xORo)) return true;
+        if (board[0][0].contains(xORo) && board[1][1].contains(xORo) && board[2][2].contains(xORo)) return true;
+        if (board[0][2].contains(xORo) && board[1][1].contains(xORo) && board[2][0].contains(xORo)) return true;
     else
         return false;
     }
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
         System.out.println("WELCOME TO TIC-TAC-TOE");
-        System.out.println("FIRST PLAYER GOES 'x', SECOND 'o'");
+        System.out.println("PLAYER 1 GOES 'x' | PLAYER 2 GOES 'o'");
         System.out.println("PLEASE ENTER THE COORDINATE TO GIVE MOVE");
         String TicTacToe[][]={{"a3","b3","c3"},
                               {"a2","b2","c2"},
@@ -61,21 +61,21 @@ public class TicTacToe {
             }
             for(int j=0;j<TicTacToe.length;j++) {
                 for(int k=0;k<TicTacToe[0].length;k++) {
-                    if(TicTacToe[j][k].equals("|x| "))
+                    if(TicTacToe[j][k].contains("|x| "))
                         System.out.print("|x| ");
-                    else if(TicTacToe[j][k].equals("|o| "))
+                    else if(TicTacToe[j][k].contains("|o| "))
                         System.out.print("|o| ");
                     else
                            System.out.print("|_| ");}
                 System.out.println();
             }
             if(CheckThreeMatchX(TicTacToe,xORo)&&i>=5){
-                if(xORo.equals("x")){
+                if(xORo.contains("x")){
                     System.out.println("PLAYER 1 WINS !!");
                     sc.close();
                     return;
                 }
-                else if(xORo.equals("o")){
+                else if(xORo.contains("o")){
                     System.out.println("PLAYER 2 WINS !!");
                     sc.close();
                     return;
